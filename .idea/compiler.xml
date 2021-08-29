@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.8">
+      <module name="UltimateGoalSoftHoarders-after-demo.FtcRobotController" target="11" />
+      <module name="UltimateGoalSoftHoarders-after-demo.TeamCode" target="11" />
+      <module name="UltimateGoalSoftHoarders-master.FtcRobotController" target="11" />
+      <module name="UltimateGoalSoftHoarders-master.TeamCode" target="11" />
+      <module name="UltimateGoalSoftHoarders.FtcRobotController" target="11" />
+      <module name="UltimateGoalSoftHoarders.TeamCode" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

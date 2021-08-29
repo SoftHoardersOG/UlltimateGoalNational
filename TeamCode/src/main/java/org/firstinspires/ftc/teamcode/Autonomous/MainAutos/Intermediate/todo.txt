@@ -1,0 +1,12 @@
+//TODO: ADI
+
+*** Intermediate1
+    1 wobble, 3 power, 3-4 high, park
+
+*** Intermediate1Ally
+    1 wobble, 3 high, park
+
+//TODO: STAMATESCU
+
+*** Intermediate2
+    1 wobble, 3 high, park
