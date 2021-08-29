@@ -22,11 +22,11 @@ public class ConstantsTeleoperated {
     // TODO: ShootAngle.
     //--------------------------------------------------------------------------------------------------------------------//
     public static double powershotPosition = 0.46; //gamepad2 -b
-    public static double shootPosition = 0.52; //gamepad2 -a
+    public static double shootPosition = 0.54; //gamepad2 -a //52 before duminica noapte
     public static double shootPositionBack = 0.542; //gamepad2 -y
 
     public static double incrementValue = 0.03;
-    public static double rightOffset = 0.34; //205; // Offset for the right servo to maintain shooter aligned
+    public static double rightOffset = 0.36; //205; // Offset for the right servo to maintain shooter aligned
     public static double upperLimit = 0.7;
     public static double lowerLimit = 0;
 

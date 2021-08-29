@@ -139,15 +139,15 @@ public class C extends AutoCase {
 
                 AutoUtil.startIntake();
                 drive.followTrajectory(TrajQuantumExterior.collect4thDisk(drive.getPoseEstimate()));
-                opMode.sleep(400);
+                opMode.sleep(650);
 
                 AutoUtil.stopIntakeMotor();
                 AutoUtil.stopIntakeServo();
 
                 drive.followTrajectory(TrajQuantumExterior.backAfter4thDisk(drive.getPoseEstimate()));
 
-                ChangeShootingAngle.AngleControl(ConstantsAutonomous.secondHighGoalShooterAngle);
-                AutoUtil.startShooting(ConstantsAutonomous.secondHighGoalShootingSpeed);
+//                ChangeShootingAngle.AngleControl(ConstantsAutonomous.secondHighGoalShooterAngle);
+//                AutoUtil.startShooting(ConstantsAutonomous.secondHighGoalShootingSpeed);
                 //todo aici mai in spate
                 AutoUtil.shoot3Disks();
                 break;

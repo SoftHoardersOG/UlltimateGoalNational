@@ -12,6 +12,7 @@ import org.firstinspires.ftc.teamcode.Autonomous.Utils.Trajectories;
 import org.firstinspires.ftc.teamcode.Autonomous.Utils.wallState;
 import org.firstinspires.ftc.teamcode.RoadRunner.drive.DriveConstants;
 import org.firstinspires.ftc.teamcode.RoadRunner.drive.MyMecanumDrive;
+import org.firstinspires.ftc.teamcode.TeleOperated.ChangeShootingAngle;
 import org.firstinspires.ftc.teamcode.TeleOperated.Wobble;
 import org.firstinspires.ftc.teamcode.TeleOperated.grabberPosition;
 import org.firstinspires.ftc.teamcode.TeleOperated.wobblePosition;
@@ -52,6 +53,9 @@ public class TrajQuantumExterior extends Trajectories {
 //                        MyMecanumDrive.getVelocityConstraint(15, DriveConstants.MAX_ANG_VEL, DriveConstants.TRACK_WIDTH),
 //                        MyMecanumDrive.getAccelerationConstraint(15))
                 .lineToSplineHeading(PositionCaseModifier.correct(diskCollectPose, colorCase))
+//                .lineToSplineHeading(PositionCaseModifier.correct(diskCollectPose, colorCase),
+//                        MyMecanumDrive.getVelocityConstraint(60, DriveConstants.MAX_ANG_VEL, DriveConstants.TRACK_WIDTH),
+//                        MyMecanumDrive.getAccelerationConstraint(60))
                 //.addTemporalMarker(0, AutoUtil::startIntake)
                 .build();
     }//AutoCase.intakeVel   AutoCase.intakeAcc
@@ -106,12 +110,19 @@ public class TrajQuantumExterior extends Trajectories {
     public static Trajectory collect4thDisk(Pose2d pose2d){
         return drive.trajectoryBuilder(pose2d)
                 .lineToSplineHeading(PositionCaseModifier.correct(collect4thDiskPose, colorCase))
+//                .lineToSplineHeading(PositionCaseModifier.correct(collect4thDiskPose, colorCase),
+//                        MyMecanumDrive.getVelocityConstraint(60, DriveConstants.MAX_ANG_VEL, DriveConstants.TRACK_WIDTH),
+//                        MyMecanumDrive.getAccelerationConstraint(60))
                 .build();
     }
 
     public static Trajectory backAfter4thDisk(Pose2d pose2d){
         return drive.trajectoryBuilder(pose2d)
                 .lineToSplineHeading(PositionCaseModifier.correct(backAfter4thDiskPose, colorCase))
+                .addTemporalMarker(1, () ->{
+                    ChangeShootingAngle.AngleControl(ConstantsAutonomous.secondHighGoalShooterAngle);
+                    AutoUtil.startShooting(ConstantsAutonomous.secondHighGoalShootingSpeed);
+                })
                 .build();
     }
 
