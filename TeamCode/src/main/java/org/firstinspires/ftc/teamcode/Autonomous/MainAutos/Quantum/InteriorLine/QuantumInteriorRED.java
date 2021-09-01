@@ -26,7 +26,7 @@ public class QuantumInteriorRED extends LinearOpMode {
         waitForStart();
 
         DiskAmountDetection.stopDetection();
-        DetectionCase.setAutoCase("B", this);
+        //DetectionCase.setAutoCase("B", this);
         AutoCase.setAutoScene(AutoScenes.QuantumInterior);
 
         DetectionCase.autoCase.releaseFirstWobble();

@@ -25,7 +25,7 @@ public class TrajIntermTwo extends Trajectories {
     public static Pose2d releaseBPose = new Pose2d(-28, 32, Math.toRadians(50));
     public static Pose2d releaseCPose = new Pose2d(-45, 49, Math.toRadians(50));
     public static Pose2d parkPose = new Pose2d(-7, 8, Math.toRadians(180));
-    public static Pose2d diskCollectPose = new Pose2d(10, 32, Math.toRadians(180));
+    public static Pose2d diskCollectPose = new Pose2d(12, 32, Math.toRadians(180));//x10
     public static ColorCase colorCase;
 
     public static void initSpecificTraj(ColorCase colorCase) {

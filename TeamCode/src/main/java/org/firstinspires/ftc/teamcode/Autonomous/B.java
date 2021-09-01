@@ -10,6 +10,7 @@ import org.firstinspires.ftc.teamcode.Autonomous.MainAutos.Quantum.InteriorLine.
 import org.firstinspires.ftc.teamcode.Autonomous.MainAutos.Worst.TrajWorst;
 import org.firstinspires.ftc.teamcode.Autonomous.Utils.AutoUtil;
 import org.firstinspires.ftc.teamcode.Autonomous.Utils.wallState;
+import org.firstinspires.ftc.teamcode.HardwarePack.Hardware;
 import org.firstinspires.ftc.teamcode.TeleOperated.ChangeShootingAngle;
 import org.firstinspires.ftc.teamcode.TeleOperated.Wobble;
 import org.firstinspires.ftc.teamcode.TeleOperated.grabberPosition;
@@ -101,6 +102,7 @@ public class B extends AutoCase {
                 break;
             case QuantumExterior:
                 drive.followTrajectory(TrajQuantumExterior.releaseBTrajectory(drive.getPoseEstimate()));
+                //opMode.sleep(wobbleArmSleep);
                 break;
             case QuantumInterior:
                 drive.followTrajectory(TrajQuantumInterior.goForwardB(drive.getPoseEstimate()));

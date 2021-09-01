@@ -17,15 +17,15 @@ public class TrajQuantumInterior extends Trajectories {
     public static ColorCase colorCase;
     public static Pose2d diskCollectPose = new Pose2d(10, 32, Math.toRadians(180)); //10
     public static Pose2d shootPose = new Pose2d(42, 33.46, Math.toRadians(180));
-    public static Pose2d releaseAPose = new Pose2d(-20, 36, Math.toRadians(180));
-    public static Pose2d releaseBPose = new Pose2d(-28, 10, Math.toRadians(230));
-    public static Pose2d releaseCPose = new Pose2d(-56, 40, Math.toRadians(270));
+    public static Pose2d releaseAPose = new Pose2d(-10, 36, Math.toRadians(180)); //-10 for blue go back to +10
+    public static Pose2d releaseBPose = new Pose2d(-18, 10, Math.toRadians(230));
+    public static Pose2d releaseCPose = new Pose2d(-53, 37, Math.toRadians(200));
     public static Pose2d slideReturnPS = new Pose2d(-53, 39, Math.toRadians(180));
     public static Pose2d backReturnPS = new Pose2d(12, 15, Math.toRadians(181));
     public static Pose2d forwardApose = new Pose2d(-20, 15, Math.toRadians(180));
     public static Pose2d forwardBpose = new Pose2d(-26, 4, Math.toRadians(180));
-    public static Pose2d forwardCpose = new Pose2d(-38.5, 15, Math.toRadians(186));
-    public static Pose2d parkPose = new Pose2d(-5, 15, Math.toRadians(180));
+    public static Pose2d forwardCpose = new Pose2d(-53.5, 15, Math.toRadians(186));
+    public static Pose2d parkPose = new Pose2d(-5, 10, Math.toRadians(180));
 
 
     public static void initSpecificTraj(ColorCase colorCase) {
@@ -86,7 +86,7 @@ public class TrajQuantumInterior extends Trajectories {
                     Wobble.motorArmToPosition(wobblePosition.DOWN);
                 })
                 .addTemporalMarker(2, () -> {
-                    Wobble.wobbleRelease();
+                Wobble.wobbleRelease();
                 })
                 .build();
     }
@@ -95,7 +95,7 @@ public class TrajQuantumInterior extends Trajectories {
     public static Trajectory returnPowerShots(Pose2d pose2d) {
         return drive.trajectoryBuilder(pose2d)
                 .lineToSplineHeading(PositionCaseModifier.correct(backReturnPS, colorCase))
-                .addTemporalMarker(0.7, () -> {
+                .addTemporalMarker(0, () -> {
                     Wobble.SetGrabberPosition(grabberPosition.GRAB);
                     Wobble.motorArmToPosition(wobblePosition.UP);
                 })

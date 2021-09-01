@@ -10,7 +10,7 @@ public class ConstantsTeleoperated {
     //--------------------------------------------------------------------------------------------------------------------//
     // TODO: Shooter
     //--------------------------------------------------------------------------------------------------------------------//
-    public static int shootingSpeed = 1400; // to be incremented
+    public static int shootingSpeed = 1250; //  1350 to be incremented
 
     public static double idlerShootPose = 0.755;
     public static double idlerFreePose = 0.816;
@@ -22,7 +22,7 @@ public class ConstantsTeleoperated {
     // TODO: ShootAngle.
     //--------------------------------------------------------------------------------------------------------------------//
     public static double powershotPosition = 0.46; //gamepad2 -b
-    public static double shootPosition = 0.54; //gamepad2 -a //52 before duminica noapte
+    public static double shootPosition = 0.62; //0.57   gamepad2 -a //52 before duminica noapte
     public static double shootPositionBack = 0.542; //gamepad2 -y
 
     public static double incrementValue = 0.03;

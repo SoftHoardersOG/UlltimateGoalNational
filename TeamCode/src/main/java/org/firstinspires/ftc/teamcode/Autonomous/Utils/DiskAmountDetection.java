@@ -19,10 +19,10 @@ import org.openftc.easyopencv.OpenCvPipeline;
 @Config
 public class DiskAmountDetection {
 
-    public static double multiplyVal = 19f;
-    public static double redMeanThreshold = 7; // it was 6.3
-    public static int xOffset = 0;
-    public static  int yOffset = 0;
+    public static double multiplyVal = 19; //19.4
+    public static double redMeanThreshold = 6.9; // it was 6.3
+    public static int xOffset = 3; //32
+    public static  int yOffset = 5;
 
     public static void stopDetection() {
         try {
@@ -101,7 +101,7 @@ public class DiskAmountDetection {
                 }
             }
 
-            //TODO : increase the multiplier (18-19) and make the result 0 when all the mat is white
+            // TODO : increase the multiplier (18-19) and make the result 0 when all the mat is white
 
             double redAmount = (int) Core.sumElems(finalMat).val[0];
             DetectionCase.diskAmount = getDiskAmount(redAmount); //TODO nu merge detectarea ta adriene //2; //

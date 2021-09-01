@@ -25,13 +25,13 @@ public class ConstantsAutonomous {
     //--------------------------------------------------------------------------------------------------------------------//
     // TODO: INTERMEDIATE2
     //--------------------------------------------------------------------------------------------------------------------//
-    public static int intermediate2ShootingSpeed = 1400;
+    public static int intermediate2ShootingSpeed = 1350;
     public static double intermediate2ShooterAngle = 0.58;
 
     //--------------------------------------------------------------------------------------------------------------------//
     // TODO: QuantumExterior
     //--------------------------------------------------------------------------------------------------------------------//
-    public static int exteriorShootingSpeedC = 1330;
+    public static int exteriorShootingSpeedC = 1340;
     public static double exteriorShooterAngleC = 0.58;
     public static double secondHighGoalShooterAngle = 0.57;
     public static int secondHighGoalShootingSpeed = 1330;
@@ -50,7 +50,7 @@ public class ConstantsAutonomous {
     // TODO: BLUEoffset
     //--------------------------------------------------------------------------------------------------------------------//
 
-    public static int BLUEoffset = -3;
+    public static int BLUEoffset = 0;
 
 //    public static int shootingSpeed = 1400;
 //    public static double intakeAngle = 0.5;
